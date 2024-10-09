@@ -1,0 +1,10 @@
+<launch>
+
+    <node name="points" pkg="ar_week5_test" type="points_generator.py" />
+    <node name="compute_cubic_coeffs" pkg="ar_week5_test" type="compute_cubic_coeffs.py" output="screen" />
+    <node name="planner" pkg="ar_week5_test" type="cubic_traj_planner.py" />
+    <node name="plotter" pkg="ar_week5_test" type="plot_cubic_traj.py" />
+    <node name="rqt_plot" pkg="rqt_plot" type="rqt_plot" args="Acc Vel Pos"/>
+    <node name="rqt_graph" pkg="rqt_graph" type="rqt_graph"/>
+
+</launch>
